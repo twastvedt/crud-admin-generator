@@ -24,9 +24,6 @@ use Silex\Application;
 
 $app = new Application();
 
-//Disable native file storage?
-//$app['session.storage.handler'] = null;
-
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
 	'twig.path' => __DIR__.'/../web/views',
 ));
@@ -38,5 +35,7 @@ $app->register(new Silex\Provider\ValidatorServiceProvider());
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 $app->register(new Silex\Provider\SessionServiceProvider());
 
+//Disable native file storage?
+$app['session.storage.handler'] = null;
 
 return $app;

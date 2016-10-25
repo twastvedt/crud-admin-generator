@@ -1,4 +1,55 @@
 {% extends 'ag_menu.html.twig' %}
 
 {% block menu %}
+
+<li class="treeview {% if option is defined and (option == 'alloy_list' or option == 'alloy_create' or option == 'alloy_edit') %}active{% endif %}">
+    <a href="#">
+        <i class="fa fa-folder-o"></i>
+        <span>alloy</span>
+        <i class="fa pull-right fa-angle-right"></i>
+    </a>
+    <ul class="treeview-menu" style="display: none;">
+        <li {% if option is defined and option == 'alloy_list' %}class="active"{% endif %}><a href="{{ path('alloy_list') }}" style="margin-left: 10px;"><i class="fa fa-angle-double-right"></i> List</a></li>
+        <li {% if option is defined and option == 'alloy_create' %}class="active"{% endif %}><a href="{{ path('alloy_create') }}" style="margin-left: 10px;"><i class="fa fa-angle-double-right"></i> Create</a></li>
+    </ul>
+</li>
+
+<li class="treeview {% if option is defined and (option == 'finish_list' or option == 'finish_create' or option == 'finish_edit') %}active{% endif %}">
+    <a href="#">
+        <i class="fa fa-folder-o"></i>
+        <span>finish</span>
+        <i class="fa pull-right fa-angle-right"></i>
+    </a>
+    <ul class="treeview-menu" style="display: none;">
+        <li {% if option is defined and option == 'finish_list' %}class="active"{% endif %}><a href="{{ path('finish_list') }}" style="margin-left: 10px;"><i class="fa fa-angle-double-right"></i> List</a></li>
+        <li {% if option is defined and option == 'finish_create' %}class="active"{% endif %}><a href="{{ path('finish_create') }}" style="margin-left: 10px;"><i class="fa fa-angle-double-right"></i> Create</a></li>
+    </ul>
+</li>
+
+<li class="treeview {% if option is defined and (option == 'job_list' or option == 'job_create' or option == 'job_edit') %}active{% endif %}">
+    <a href="#">
+        <i class="fa fa-folder-o"></i>
+        <span>job</span>
+        <i class="fa pull-right fa-angle-right"></i>
+    </a>
+    <ul class="treeview-menu" style="display: none;">
+        <li {% if option is defined and option == 'job_list' %}class="active"{% endif %}><a href="{{ path('job_list') }}" style="margin-left: 10px;"><i class="fa fa-angle-double-right"></i> List</a></li>
+        <li {% if option is defined and option == 'job_create' %}class="active"{% endif %}><a href="{{ path('job_create') }}" style="margin-left: 10px;"><i class="fa fa-angle-double-right"></i> Create</a></li>
+    </ul>
+</li>
+
+<li class="treeview {% if option is defined and (option == 'metal_list' or option == 'metal_create' or option == 'metal_edit') %}active{% endif %}">
+    <a href="#">
+        <i class="fa fa-folder-o"></i>
+        <span>metal</span>
+        <i class="fa pull-right fa-angle-right"></i>
+    </a>
+    <ul class="treeview-menu" style="display: none;">
+        <li {% if option is defined and option == 'metal_list' %}class="active"{% endif %}><a href="{{ path('metal_list') }}" style="margin-left: 10px;"><i class="fa fa-angle-double-right"></i> List</a></li>
+        <li {% if option is defined and option == 'metal_create' %}class="active"{% endif %}><a href="{{ path('metal_create') }}" style="margin-left: 10px;"><i class="fa fa-angle-double-right"></i> Create</a></li>
+    </ul>
+</li>
+
+
+
 {% endblock %}

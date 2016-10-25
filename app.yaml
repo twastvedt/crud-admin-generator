@@ -9,6 +9,8 @@ skip_files:
 - ^(.*/)?\.git$
 
 handlers:
+- url: /resources
+  static_dir: web/resources
 # the symfony front controller
 - url: /.*
   script: web/index.php
