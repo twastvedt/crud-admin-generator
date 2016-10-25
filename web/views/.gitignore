@@ -1,4 +1,5 @@
 *
 !.gitignore
 !.htaccess
-!ag_*/*
+!ag_base/*
+!ag_*
