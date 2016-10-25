@@ -4,13 +4,25 @@ CRUD Admin Generator
 What is CRUD Admin Generator?
 -----------------------------
 
-**CRUD Admin Generator** ([http://crud-admin-generator.com][1]) is a tool to **generate a complete backend from a MySql database** where you can create, read, update and delete records in a database. 
+**CRUD Admin Generator** ([http://crud-admin-generator.com][1]) is a tool to **generate a complete backend from a MySql database** where you can create, read, update and delete records in a database.
 
-**The backend is generated in seconds** without configuration files where there is a lot of *"magic"* and is very difficult to adapt to your needs. 
+**The backend is generated in seconds** without configuration files where there is a lot of *"magic"* and is very difficult to adapt to your needs.
 
 **The generated code is fully customizable and extensible.**
 
 It has been programmed with the Silex framework, so the resulting code is PHP.
+
+Installing on Google Cloud
+--------------------------
+
+1. Add this repository to your Google Cloud Platform Repositories.
+2. In the console, run:
+	`gcloud source repos clone crud-admin-generator ~/src/[project]/crud-admin-generator &&
+	cd ~/src/[project]/crud-admin-generator`
+2. In app engine console install php-mysql: `sudo apt-get install php5-mysql`
+	Note: This is temporary, and needs to be done each time you update the app. Better way?)
+3. Follow Installation, below.
+4. Run `gcloud app deploy app.yaml`.
 
 
 Installation
@@ -67,7 +79,7 @@ This is an example of VirtualHost:
             </ifModule>
         </Directory>
     </VirtualHost>
-    
+
 You can customize the url using the .htaccess file, maybe this will help you:
 [http://stackoverflow.com/questions/24952846/how-do-i-remove-the-web-from-my-url/24953439#24953439](http://stackoverflow.com/questions/24952846/how-do-i-remove-the-web-from-my-url/24953439#24953439)
 
